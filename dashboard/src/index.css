@@ -1,0 +1,52 @@
+:root {
+  /* Core palette — deep ink + warm parchment ledger tones, one clear
+     signal color for promo/lift (a muted amber, evoking a price tag)
+     rather than a generic bright accent. */
+  --ink-950: #14181f;
+  --ink-800: #232a35;
+  --ink-600: #4a5568;
+  --ink-400: #8891a0;
+  --paper-100: #f6f4ef;
+  --paper-000: #fcfbf8;
+  --line: #dcd6c9;
+  --signal-amber: #b8763e;
+  --signal-amber-soft: #e9d3bb;
+  --positive: #3f6e52;
+  --negative: #a13f3f;
+
+  --font-display: "Newsreader", Georgia, serif;
+  --font-body: "IBM Plex Sans", -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--paper-100);
+  color: var(--ink-950);
+  font-family: var(--font-body);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+button {
+  font-family: inherit;
+}
+
+::selection {
+  background: var(--signal-amber-soft);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}

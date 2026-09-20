@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+*.egg-info/
+
+# Data (too large / not to be committed)
+data/raw/*.csv
+data/raw/*.zip
+data/processed/*.parquet
+models/*.pkl
+models/*.json
+
+# Keep folder structure
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!models/.gitkeep
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Node / dashboard
+dashboard/node_modules/
+dashboard/dist/
+
+# OS
+.DS_Store

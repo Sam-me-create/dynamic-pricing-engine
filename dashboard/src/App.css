@@ -1,0 +1,258 @@
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 24px 64px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding: 48px 0 32px;
+  border-bottom: 1px solid var(--line);
+}
+
+.header-mark {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  color: var(--paper-000);
+  background: var(--ink-950);
+  padding: 4px 8px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.header-text h1 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 28px;
+  margin: 0 0 4px;
+  color: var(--ink-950);
+}
+
+.header-text p {
+  margin: 0;
+  color: var(--ink-600);
+  font-size: 14px;
+}
+
+/* Summary strip */
+.summary-strip {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  margin: 32px 0;
+  background: var(--paper-000);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.summary-strip.loading,
+.summary-strip.error {
+  padding: 20px 24px;
+  color: var(--ink-600);
+  font-size: 14px;
+}
+
+.summary-strip.error {
+  color: var(--negative);
+}
+
+.summary-cell {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 20px 24px;
+}
+
+.summary-divider {
+  width: 1px;
+  background: var(--line);
+  margin: 20px 0;
+}
+
+.summary-label {
+  font-size: 12px;
+  color: var(--ink-600);
+}
+
+.summary-value {
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--ink-950);
+  line-height: 1.1;
+}
+
+.summary-value.accent {
+  color: var(--signal-amber);
+}
+
+.summary-sub {
+  font-size: 12px;
+  color: var(--ink-400);
+}
+
+/* Main / store selector */
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.store-selector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.store-selector label {
+  font-size: 13px;
+  color: var(--ink-600);
+}
+
+.store-selector select {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: var(--paper-000);
+  color: var(--ink-950);
+}
+
+.store-selector select:focus-visible {
+  outline: 2px solid var(--signal-amber);
+  outline-offset: 1px;
+}
+
+/* Panels */
+.panel {
+  background: var(--paper-000);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 20px 24px 24px;
+}
+
+.panel.loading,
+.panel.error {
+  color: var(--ink-600);
+  font-size: 14px;
+}
+
+.panel.error {
+  color: var(--negative);
+}
+
+.panel.error code {
+  display: inline-block;
+  margin-top: 8px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  background: var(--paper-100);
+  padding: 4px 8px;
+  border-radius: 3px;
+}
+
+.panel-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.panel-heading h2 {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+  color: var(--ink-950);
+}
+
+.panel-sub {
+  font-size: 12px;
+  color: var(--ink-600);
+  font-family: var(--font-mono);
+}
+
+.legend {
+  display: flex;
+  gap: 16px;
+  font-size: 12px;
+  color: var(--ink-600);
+}
+
+.legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.dot-actual {
+  background: var(--ink-950);
+}
+
+.dot-forecast {
+  background: var(--signal-amber);
+}
+
+.dot-promo {
+  background: var(--signal-amber-soft);
+  border: 1px solid var(--signal-amber);
+}
+
+/* Recommendation table */
+.rec-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.rec-table th {
+  text-align: left;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink-600);
+  padding: 8px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.rec-table td {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--paper-100);
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+.accent {
+  color: var(--positive);
+}
+
+.empty-state {
+  color: var(--ink-600);
+  font-size: 14px;
+}
+
+/* Footer */
+.footer {
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  font-size: 12px;
+  color: var(--ink-400);
+}
