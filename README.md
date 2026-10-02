@@ -64,6 +64,14 @@ python src/pricing_engine.py     # generates recommendations
 python src/evaluate.py           # backtests, prints MAPE/RMSE + simulated revenue lift
 ```
 
+**macOS note:** XGBoost's prebuilt wheel needs the OpenMP runtime, which
+Apple's Clang doesn't ship. If `import xgboost` fails with
+`Library not loaded: @rpath/libomp.dylib`, run:
+
+```bash
+brew install libomp
+```
+
 ### 3. Run the API
 
 ```bash
